@@ -1,0 +1,19 @@
+{
+  "name": "package-metadata",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "/workspace/scratch/b2a202e48e18/qa/tooling/compile_net8.py",
+    "--out",
+    "/workspace/scratch/b2a202e48e18/qa/v60-evidence/package-metadata.dll",
+    "--run",
+    "/workspace/scratch/b2a202e48e18/qa/PackageMetadataTests.cs"
+  ],
+  "exit_code": 0,
+  "seconds": 0.755,
+  "stdout": "PASS: 6 checks of PE, assembly, file version, manifest, runtime target and WinForms DPI configuration; no Windows execution.\n",
+  "stderr": "",
+  "windows_native_executed": false,
+  "windows_ui_executed": false,
+  "kind": "executed_linux",
+  "reported_assertions": 6
+}

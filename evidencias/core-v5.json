@@ -1,0 +1,28 @@
+{
+  "name": "core-v5",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "/workspace/scratch/b2a202e48e18/qa/tooling/compile_net8.py",
+    "--out",
+    "/workspace/scratch/b2a202e48e18/qa/v60-evidence/core-v5.dll",
+    "--run",
+    "/workspace/scratch/b2a202e48e18/qa/CoreV5Tests.cs",
+    "/workspace/scratch/b2a202e48e18/pasta-gb-icones/SizePresentation.cs",
+    "/workspace/scratch/b2a202e48e18/pasta-gb-icones/SizeRefreshPolicy.cs",
+    "/workspace/scratch/b2a202e48e18/pasta-gb-icones/SizeResultPolicy.cs",
+    "/workspace/scratch/b2a202e48e18/pasta-gb-icones/AppPreferences.cs",
+    "/workspace/scratch/b2a202e48e18/pasta-gb-icones/PathRelations.cs",
+    "/workspace/scratch/b2a202e48e18/pasta-gb-icones/VolumeRevisions.cs",
+    "/workspace/scratch/b2a202e48e18/pasta-gb-icones/ManagedWorker.cs",
+    "/workspace/scratch/b2a202e48e18/pasta-gb-icones/Scanner.cs",
+    "/workspace/scratch/b2a202e48e18/pasta-gb-icones/DirectoryIdentity.cs"
+  ],
+  "exit_code": 0,
+  "seconds": 1.231,
+  "stdout": "PASS: 67 checks for states, association, dependencies, refresh, preferences and thread recovery. Linux; Windows UI not executed.\n",
+  "stderr": "",
+  "windows_native_executed": false,
+  "windows_ui_executed": false,
+  "kind": "executed_linux",
+  "reported_assertions": 67
+}

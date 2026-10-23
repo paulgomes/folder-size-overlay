@@ -1,0 +1,22 @@
+{
+  "name": "installer-transaction-v60",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "/workspace/scratch/b2a202e48e18/qa/tooling/compile_net8.py",
+    "--out",
+    "/workspace/scratch/b2a202e48e18/qa/v60-evidence/installer-transaction-v60.dll",
+    "--run",
+    "--define",
+    "SETUP_TESTS",
+    "/workspace/scratch/b2a202e48e18/qa/V60InstallerTests.cs",
+    "/workspace/scratch/b2a202e48e18/pasta-gb-icones/../installer/Setup.cs"
+  ],
+  "exit_code": 0,
+  "seconds": 1.233,
+  "stdout": "PASS: 66 installer assertions; managed transaction/file I/O on Unix; Windows UI, mutex, registry and shortcut integration not executed.\n",
+  "stderr": "",
+  "windows_native_executed": false,
+  "windows_ui_executed": false,
+  "kind": "executed_linux",
+  "reported_assertions": 66
+}

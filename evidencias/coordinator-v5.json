@@ -1,0 +1,30 @@
+{
+  "name": "coordinator-v5",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "/workspace/scratch/b2a202e48e18/qa/tooling/compile_net8.py",
+    "--out",
+    "/workspace/scratch/b2a202e48e18/qa/v60-evidence/coordinator-v5.dll",
+    "--run",
+    "/workspace/scratch/b2a202e48e18/qa/CoordinatorV5Tests.cs",
+    "/workspace/scratch/b2a202e48e18/pasta-gb-icones/IconCoordinator.cs",
+    "/workspace/scratch/b2a202e48e18/pasta-gb-icones/CoordinatorPolicy.cs",
+    "/workspace/scratch/b2a202e48e18/pasta-gb-icones/ScanQueuePolicy.cs",
+    "/workspace/scratch/b2a202e48e18/pasta-gb-icones/SizePresentation.cs",
+    "/workspace/scratch/b2a202e48e18/pasta-gb-icones/SizeRefreshPolicy.cs",
+    "/workspace/scratch/b2a202e48e18/pasta-gb-icones/SizeResultPolicy.cs",
+    "/workspace/scratch/b2a202e48e18/pasta-gb-icones/AppPreferences.cs",
+    "/workspace/scratch/b2a202e48e18/pasta-gb-icones/PathRelations.cs",
+    "/workspace/scratch/b2a202e48e18/pasta-gb-icones/VolumeRevisions.cs",
+    "/workspace/scratch/b2a202e48e18/pasta-gb-icones/Scanner.cs",
+    "/workspace/scratch/b2a202e48e18/pasta-gb-icones/DirectoryIdentity.cs"
+  ],
+  "exit_code": 0,
+  "seconds": 6.431,
+  "stdout": "PASS: 24 assertions against production IconCoordinator.cs with fake process/notification adapters.\n",
+  "stderr": "",
+  "windows_native_executed": false,
+  "windows_ui_executed": false,
+  "kind": "executed_linux",
+  "reported_assertions": 24
+}

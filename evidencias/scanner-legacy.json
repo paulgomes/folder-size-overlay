@@ -1,0 +1,21 @@
+{
+  "name": "scanner-legacy",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "/workspace/scratch/b2a202e48e18/qa/tooling/compile_net8.py",
+    "--out",
+    "/workspace/scratch/b2a202e48e18/qa/v60-evidence/scanner-legacy.dll",
+    "--run",
+    "/workspace/scratch/b2a202e48e18/qa/ScannerTests.cs",
+    "/workspace/scratch/b2a202e48e18/pasta-gb-icones/Scanner.cs",
+    "/workspace/scratch/b2a202e48e18/pasta-gb-icones/DirectoryIdentity.cs"
+  ],
+  "exit_code": 0,
+  "seconds": 1.372,
+  "stdout": "PASS: 163 assertions; empty/nested/counts/direct-files/top100/errors/links/issue-bound/cancellation.\n",
+  "stderr": "",
+  "windows_native_executed": false,
+  "windows_ui_executed": false,
+  "kind": "executed_linux",
+  "reported_assertions": 163
+}

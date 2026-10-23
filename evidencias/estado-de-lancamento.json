@@ -1,0 +1,14 @@
+{
+  "version": "6.0.0.0",
+  "status": "release_candidate",
+  "commercial_release_approved": false,
+  "portable_groups_passed": 29,
+  "compile_gates_passed": 5,
+  "reported_assertions": 26320,
+  "windows_native_executed": false,
+  "windows_ui_executed": false,
+  "windows_performance_measured": false,
+  "authenticode_applied": false,
+  "exe_sha256": "3453764f329e3cb6d631a1b8ec6802e5c33ab9a7dac54481ffbbd83eda48dc52",
+  "installer_sha256": "d33e39eb09bbdba563ed7f15964fe482b2edc0b4e622cb35f81b886e31841277"
+}

@@ -1,0 +1,22 @@
+{
+  "name": "windows-junction-compile",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "/workspace/scratch/b2a202e48e18/qa/tooling/compile_net48.py",
+    "--out",
+    "/workspace/scratch/b2a202e48e18/qa/v60-evidence/windows-junction-compile.exe",
+    "--target",
+    "exe",
+    "--assembly-reference",
+    "/workspace/scratch/b2a202e48e18/pasta-gb-icones/PastaGBIcones.exe",
+    "/workspace/scratch/b2a202e48e18/qa/ScannerWindowsFixtureTests.cs"
+  ],
+  "exit_code": 0,
+  "seconds": 0.792,
+  "stdout": "",
+  "stderr": "",
+  "windows_native_executed": false,
+  "windows_ui_executed": false,
+  "kind": "compile_only",
+  "reported_assertions": null
+}

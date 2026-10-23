@@ -1,0 +1,12 @@
+# Preserve the exact bytes of the verified 6.0 source and binaries.
+* -text
+*.md text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+.gitignore text eol=lf
+.gitattributes text eol=lf
+
+# Historical evidence and the frozen comparison baseline remain inspectable.
+evidencias/** linguist-generated=true
+benchmarks/baseline-v51/** linguist-vendored=true
+*.exe binary

@@ -1,0 +1,20 @@
+{
+  "name": "view-events",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "/workspace/scratch/b2a202e48e18/qa/tooling/compile_net8.py",
+    "--out",
+    "/workspace/scratch/b2a202e48e18/qa/v60-evidence/view-events.dll",
+    "--run",
+    "/workspace/scratch/b2a202e48e18/qa/ViewChangePolicyTests.cs",
+    "/workspace/scratch/b2a202e48e18/pasta-gb-icones/ViewChangePolicy.cs"
+  ],
+  "exit_code": 0,
+  "seconds": 0.958,
+  "stdout": "PASS: 62 checks against production ViewChangePolicy.cs (pure logic; no Windows UI execution).\n",
+  "stderr": "",
+  "windows_native_executed": false,
+  "windows_ui_executed": false,
+  "kind": "executed_linux",
+  "reported_assertions": 62
+}

@@ -1,0 +1,20 @@
+{
+  "name": "queue-policy",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "/workspace/scratch/b2a202e48e18/qa/tooling/compile_net8.py",
+    "--out",
+    "/workspace/scratch/b2a202e48e18/qa/v60-evidence/queue-policy.dll",
+    "--run",
+    "/workspace/scratch/b2a202e48e18/qa/ScanQueuePolicyTests.cs",
+    "/workspace/scratch/b2a202e48e18/pasta-gb-icones/ScanQueuePolicy.cs"
+  ],
+  "exit_code": 0,
+  "seconds": 0.993,
+  "stdout": "Slow-folder regression: desktop first starts at 400 s; all 6 folders start; at most 2 scans run.\nPreemption regression: foreground starts at 43 s after one cancellation; promoted desktop reads complete protected.\nPASS: 34 checks; initial priority, aging, fairness, reentry, reserved foreground and protected preemption simulations.\n",
+  "stderr": "",
+  "windows_native_executed": false,
+  "windows_ui_executed": false,
+  "kind": "executed_linux",
+  "reported_assertions": 34
+}

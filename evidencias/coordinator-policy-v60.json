@@ -1,0 +1,22 @@
+{
+  "name": "coordinator-policy-v60",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "/workspace/scratch/b2a202e48e18/qa/tooling/compile_net8.py",
+    "--out",
+    "/workspace/scratch/b2a202e48e18/qa/v60-evidence/coordinator-policy-v60.dll",
+    "--run",
+    "/workspace/scratch/b2a202e48e18/qa/V60CoordinatorPolicyTests.cs",
+    "/workspace/scratch/b2a202e48e18/pasta-gb-icones/CoordinatorPolicy.cs",
+    "/workspace/scratch/b2a202e48e18/pasta-gb-icones/SizePresentation.cs",
+    "/workspace/scratch/b2a202e48e18/pasta-gb-icones/AppPreferences.cs"
+  ],
+  "exit_code": 0,
+  "seconds": 1.027,
+  "stdout": "pasta-gb-icones/SizePresentation.cs(14,23): warning CS0649: Field 'SizeRecord.LastResultPartial' is never assigned to, and will always have its default value false\npasta-gb-icones/SizePresentation.cs(16,22): warning CS0649: Field 'SizeRecord.FailureCount' is never assigned to, and will always have its default value 0\npasta-gb-icones/SizePresentation.cs(12,23): warning CS0649: Field 'SizeRecord.Bytes' is never assigned to, and will always have its default value 0\npasta-gb-icones/SizePresentation.cs(17,25): warning CS0649: Field 'SizeRecord.VolumeStamp' is never assigned to, and will always have its default value null\npasta-gb-icones/SizePresentation.cs(11,25): warning CS0649: Field 'SizeRecord.Path' is never assigned to, and will always have its default value null\nPASS: 29 V6 debounce and scheduling deadline assertions.\n",
+  "stderr": "",
+  "windows_native_executed": false,
+  "windows_ui_executed": false,
+  "kind": "executed_linux",
+  "reported_assertions": 29
+}

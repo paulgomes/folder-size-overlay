@@ -1,0 +1,22 @@
+{
+  "name": "probe-index-v60",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "/workspace/scratch/b2a202e48e18/qa/tooling/compile_net8.py",
+    "--out",
+    "/workspace/scratch/b2a202e48e18/qa/v60-evidence/probe-index-v60.dll",
+    "--run",
+    "/workspace/scratch/b2a202e48e18/qa/V60VisualTests.cs",
+    "/workspace/scratch/b2a202e48e18/qa/V60VisualBaseline.cs",
+    "/workspace/scratch/b2a202e48e18/pasta-gb-icones/ProbeNameIndex.cs",
+    "/workspace/scratch/b2a202e48e18/pasta-gb-icones/DesktopItemIndex.cs"
+  ],
+  "exit_code": 0,
+  "seconds": 1.203,
+  "stdout": "qa/V60VisualBaseline.cs(17,25): warning CS0649: Field 'V60VisualBaseline.ShellEntry.Path' is never assigned to, and will always have its default value null\npasta-gb-icones/DesktopItemIndex.cs(13,23): warning CS0649: Field 'DesktopGeometryItem.Editing' is never assigned to, and will always have its default value false\nqa/V60VisualBaseline.cs(11,59): warning CS0649: Field 'V60VisualBaseline.ResolutionState.Resolved' is never assigned to, and will always have its default value false\npasta-gb-icones/DesktopItemIndex.cs(12,23): warning CS0649: Field 'DesktopGeometryItem.Selected' is never assigned to, and will always have its default value false\n{\"suite\":\"V60VisualTests\",\"assertions\":22470,\"result\":\"PASS\",\"runtime_scope\":\"pure managed .NET 8; no Windows UIA or GDI execution\"}\n",
+  "stderr": "",
+  "windows_native_executed": false,
+  "windows_ui_executed": false,
+  "kind": "executed_linux",
+  "reported_assertions": 22470
+}

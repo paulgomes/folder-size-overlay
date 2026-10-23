@@ -1,0 +1,21 @@
+{
+  "name": "visual-performance-regression",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "/workspace/scratch/b2a202e48e18/qa/tooling/compile_net8.py",
+    "--out",
+    "/workspace/scratch/b2a202e48e18/qa/v60-evidence/visual-performance-regression.dll",
+    "--run",
+    "/workspace/scratch/b2a202e48e18/qa/VisualPerformanceTests.cs",
+    "/workspace/scratch/b2a202e48e18/pasta-gb-icones/VisualSnapshotPolicy.cs",
+    "/workspace/scratch/b2a202e48e18/pasta-gb-icones/LabelLayout.cs"
+  ],
+  "exit_code": 0,
+  "seconds": 1.036,
+  "stdout": "{\"suite\":\"visual-performance-regressions\",\"passed\":true,\"assertions\":693}\n",
+  "stderr": "",
+  "windows_native_executed": false,
+  "windows_ui_executed": false,
+  "kind": "executed_linux",
+  "reported_assertions": 693
+}

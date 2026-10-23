@@ -1,0 +1,22 @@
+{
+  "name": "watcher-registration-race",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "/workspace/scratch/b2a202e48e18/qa/tooling/compile_net8.py",
+    "--out",
+    "/workspace/scratch/b2a202e48e18/qa/v60-evidence/watcher-registration-race.dll",
+    "--run",
+    "--define",
+    "WATCHER_RACE_TESTS",
+    "/workspace/scratch/b2a202e48e18/qa/FolderWatcherRaceTests.cs",
+    "/workspace/scratch/b2a202e48e18/pasta-gb-icones/FolderChangeTracker.cs"
+  ],
+  "exit_code": 0,
+  "seconds": 2.282,
+  "stdout": "PASS: 7 deterministic watcher race assertions; real events on Unix.\n",
+  "stderr": "",
+  "windows_native_executed": false,
+  "windows_ui_executed": false,
+  "kind": "executed_linux",
+  "reported_assertions": 7
+}

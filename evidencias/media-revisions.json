@@ -1,0 +1,20 @@
+{
+  "name": "media-revisions",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "/workspace/scratch/b2a202e48e18/qa/tooling/compile_net8.py",
+    "--out",
+    "/workspace/scratch/b2a202e48e18/qa/v60-evidence/media-revisions.dll",
+    "--run",
+    "/workspace/scratch/b2a202e48e18/qa/VolumeRevisionsTests.cs",
+    "/workspace/scratch/b2a202e48e18/pasta-gb-icones/VolumeRevisions.cs"
+  ],
+  "exit_code": 0,
+  "seconds": 0.999,
+  "stdout": "PASS: 24 checks against production VolumeRevisions.cs (pure logic; no device events executed).\n",
+  "stderr": "",
+  "windows_native_executed": false,
+  "windows_ui_executed": false,
+  "kind": "executed_linux",
+  "reported_assertions": 24
+}

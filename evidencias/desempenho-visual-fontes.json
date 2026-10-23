@@ -1,0 +1,9 @@
+{
+  "qa/baseline-v51/DesktopProbe.cs": "9852a08848d3755861a3d55e00d8e700028cc2b822a9904660f0791942122f23",
+  "qa/baseline-v51/ExplorerProbe.cs": "e96ca033e0ef4c608fd9851bb3effce42afe6834fb77d04469efbb598ea0f327",
+  "pasta-gb-icones/ProbeNameIndex.cs": "855cae5d9342cb1b8d898845c96ce5d8acd45af93a33e22ed6ae22845036d607",
+  "pasta-gb-icones/DesktopItemIndex.cs": "cd05d5afec62ab8c06bafef7b558291ab5338a6142a817db2d4e135977aee5d0",
+  "qa/V60VisualBaseline.cs": "58579510b289d867915d6846106f2f6acc222d3e6f8f38e5c0d43681ed832472",
+  "qa/V60VisualTests.cs": "cabc996caf3b7a14383ab280dce15ae004da64f16c7e47ac9876a14ecf77b0d8",
+  "qa/V60VisualBench.cs": "f27cd3f8110c576b50ba8d98cab8aec9ad3ede8e246f480d165e4f8bc00b50a2"
+}

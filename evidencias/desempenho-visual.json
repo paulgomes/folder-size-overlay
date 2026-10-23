@@ -1,0 +1,66 @@
+{
+  "scope": "Managed helper microbenchmark on .NET8/Linux. No Windows UIA, GDI, native UI, disk I/O or whole-application CPU measurement.",
+  "baseline": "5.1 algorithms copied without logic changes from qa/baseline-v51",
+  "results": [
+    {
+      "case": "explorer_cold_index_100000_sorted_names_200_lookups",
+      "iterations": 6,
+      "trials": 7,
+      "baseline_median_ms": 52.6188,
+      "current_median_ms": 29.2635,
+      "baseline_median_allocated_bytes": 36231120,
+      "current_median_allocated_bytes": 9751808,
+      "digest": 1200
+    },
+    {
+      "case": "explorer_cold_index_100000_shuffled_names_200_lookups",
+      "iterations": 6,
+      "trials": 7,
+      "baseline_median_ms": 66.1832,
+      "current_median_ms": 319.8066,
+      "baseline_median_allocated_bytes": 36231120,
+      "current_median_allocated_bytes": 9752192,
+      "digest": 1200
+    },
+    {
+      "case": "explorer_stable_100000_names_200_lookups",
+      "iterations": 120,
+      "trials": 7,
+      "baseline_median_ms": 1057.6653,
+      "current_median_ms": 7.4649,
+      "baseline_median_allocated_bytes": 724597184,
+      "current_median_allocated_bytes": 80,
+      "digest": 24000
+    },
+    {
+      "case": "explorer_10_new_exclusions_per_frame_100000_names",
+      "iterations": 60,
+      "trials": 7,
+      "baseline_median_ms": 557.5315,
+      "current_median_ms": 4.7408,
+      "baseline_median_allocated_bytes": 362296992,
+      "current_median_allocated_bytes": 753680,
+      "digest": 11923
+    },
+    {
+      "case": "desktop_1000_items_200_folders_including_index_build",
+      "iterations": 60,
+      "trials": 7,
+      "baseline_median_ms": 58.652,
+      "current_median_ms": 3.4153,
+      "baseline_median_allocated_bytes": 80,
+      "current_median_allocated_bytes": 204560,
+      "digest": 35412000
+    },
+    {
+      "case": "desktop_50_items_10_folders_including_index_build",
+      "iterations": 300,
+      "trials": 7,
+      "baseline_median_ms": 1.0548,
+      "current_median_ms": 0.5236,
+      "baseline_median_allocated_bytes": 80,
+      "current_median_allocated_bytes": 110480,
+      "digest": 4413000
+    }
+  ]
+}

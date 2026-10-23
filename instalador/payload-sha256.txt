@@ -1,0 +1,2 @@
+3453764f329e3cb6d631a1b8ec6802e5c33ab9a7dac54481ffbbd83eda48dc52  PastaGBIcones.exe
+d7f87bb372af3810e5e37f76653565ff2796d62c7e5f4d1d97a1c85c7595dd0b  PastaGBIcones.exe.config

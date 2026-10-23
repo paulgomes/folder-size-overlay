@@ -1,0 +1,25 @@
+{
+  "name": "layout-cache-regression",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "/workspace/scratch/b2a202e48e18/qa/tooling/compile_net8.py",
+    "--out",
+    "/workspace/scratch/b2a202e48e18/qa/v60-evidence/layout-cache-regression.dll",
+    "--run",
+    "/workspace/scratch/b2a202e48e18/qa/LayoutPlanCacheTests.cs",
+    "/workspace/scratch/b2a202e48e18/pasta-gb-icones/LayoutPlanCache.cs",
+    "/workspace/scratch/b2a202e48e18/pasta-gb-icones/LabelLayout.cs",
+    "/workspace/scratch/b2a202e48e18/pasta-gb-icones/ViewSnapshot.cs",
+    "/workspace/scratch/b2a202e48e18/pasta-gb-icones/VisualSnapshotPolicy.cs",
+    "/workspace/scratch/b2a202e48e18/pasta-gb-icones/SizePresentation.cs",
+    "/workspace/scratch/b2a202e48e18/pasta-gb-icones/AppPreferences.cs"
+  ],
+  "exit_code": 0,
+  "seconds": 0.97,
+  "stdout": "pasta-gb-icones/LayoutPlanCache.cs(10,23): warning CS0649: Field 'LabelPlacement.Compact' is never assigned to, and will always have its default value false\npasta-gb-icones/SizePresentation.cs(16,22): warning CS0649: Field 'SizeRecord.FailureCount' is never assigned to, and will always have its default value 0\npasta-gb-icones/SizePresentation.cs(15,27): warning CS0649: Field 'SizeRecord.FinishedUtc' is never assigned to, and will always have its default value \npasta-gb-icones/SizePresentation.cs(17,25): warning CS0649: Field 'SizeRecord.VolumeStamp' is never assigned to, and will always have its default value null\npasta-gb-icones/SizePresentation.cs(11,25): warning CS0649: Field 'SizeRecord.Path' is never assigned to, and will always have its default value null\npasta-gb-icones/LayoutPlanCache.cs(10,32): warning CS0649: Field 'LabelPlacement.AlignRight' is never assigned to, and will always have its default value false\nPASS: 197 checks of bounded layout and caption reuse; no Windows UI execution.\n",
+  "stderr": "",
+  "windows_native_executed": false,
+  "windows_ui_executed": false,
+  "kind": "executed_linux",
+  "reported_assertions": 197
+}

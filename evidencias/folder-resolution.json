@@ -1,0 +1,20 @@
+{
+  "name": "folder-resolution",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "/workspace/scratch/b2a202e48e18/qa/tooling/compile_net8.py",
+    "--out",
+    "/workspace/scratch/b2a202e48e18/qa/v60-evidence/folder-resolution.dll",
+    "--run",
+    "/workspace/scratch/b2a202e48e18/qa/FolderResolutionStateTests.cs",
+    "/workspace/scratch/b2a202e48e18/pasta-gb-icones/FolderResolutionState.cs"
+  ],
+  "exit_code": 0,
+  "seconds": 0.922,
+  "stdout": "PASS: 14 checks against production FolderResolutionState.cs (pure logic; no Shell calls executed).\n",
+  "stderr": "",
+  "windows_native_executed": false,
+  "windows_ui_executed": false,
+  "kind": "executed_linux",
+  "reported_assertions": 14
+}

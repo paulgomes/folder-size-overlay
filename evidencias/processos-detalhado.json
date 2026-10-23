@@ -1,0 +1,15 @@
+{
+  "runner": "real child processes on linux",
+  "windows_ui_executed": false,
+  "exit_code": 0,
+  "stdout": "PASS: 114 assertions in 15 cases; protocol/real IPC/crash/cancel/deadlines/owned-worker budget.\nLeitores reservados: 0/2; iniciados: 12; falhas: 13; limites de tempo: 5; encerramentos solicitados ao SO: 6; pedidos adiados por limite: 1; quarentena atual: 0; limites de CPU confirmados: 0; inícios sem limite nativo de CPU: 12; limites de memória confirmados: 0; inícios sem limite nativo de memória: 12.\nWINDOWS_UI_EXECUTED=false\n",
+  "stderr": "",
+  "sources_sha256": {
+    "pasta-gb-icones/Scanner.cs": "48768d3514945171c8faf9d9b684f1c113b30a010118f0fc659a12007a12e7da",
+    "pasta-gb-icones/DirectoryIdentity.cs": "ddbf8f339425f13dd26e0d2f88d933e3543866ebe532f37a03950738cb425d7e",
+    "pasta-gb-icones/ScanProtocol.cs": "3d549071c4754f5bc670b78b7f9ff9488ba82999fca214dcd005a166c119e3de",
+    "pasta-gb-icones/ScanProcess.cs": "a740d77cef4aafe9299ac8c99cf45492a46310be7910680efdcaf939c2cc89b7",
+    "qa/ScanProcessTests.cs": "4e898b9c25d91c6c36ec3155365c6cdac453040abc19ae76544c3157640b9d6d"
+  },
+  "sources_changed_during_run": false
+}

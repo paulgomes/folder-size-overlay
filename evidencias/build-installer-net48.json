@@ -1,0 +1,15 @@
+{
+  "name": "build-installer-net48",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "/workspace/scratch/b2a202e48e18/qa/build_v60_installer.py"
+  ],
+  "exit_code": 0,
+  "seconds": 0.826,
+  "stdout": "",
+  "stderr": "",
+  "windows_native_executed": false,
+  "windows_ui_executed": false,
+  "kind": "compile_only",
+  "reported_assertions": null
+}

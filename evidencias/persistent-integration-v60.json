@@ -1,0 +1,27 @@
+{
+  "name": "persistent-integration-v60",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "/workspace/scratch/b2a202e48e18/qa/tooling/compile_net8.py",
+    "--out",
+    "/workspace/scratch/b2a202e48e18/qa/v60-evidence/persistent-integration-v60.dll",
+    "--run",
+    "/workspace/scratch/b2a202e48e18/qa/V60PersistentIntegrationTests.cs",
+    "/workspace/scratch/b2a202e48e18/pasta-gb-icones/App.Persistent.cs",
+    "/workspace/scratch/b2a202e48e18/pasta-gb-icones/PersistentSizeCache.cs",
+    "/workspace/scratch/b2a202e48e18/pasta-gb-icones/PersistentSizeIdentity.cs",
+    "/workspace/scratch/b2a202e48e18/pasta-gb-icones/SizePresentation.cs",
+    "/workspace/scratch/b2a202e48e18/pasta-gb-icones/AppPreferences.cs",
+    "/workspace/scratch/b2a202e48e18/pasta-gb-icones/VolumeRevisions.cs",
+    "/workspace/scratch/b2a202e48e18/pasta-gb-icones/Scanner.cs",
+    "/workspace/scratch/b2a202e48e18/pasta-gb-icones/DirectoryIdentity.cs"
+  ],
+  "exit_code": 0,
+  "seconds": 2.572,
+  "stdout": "pasta-gb-icones/SizePresentation.cs(16,22): warning CS0649: Field 'SizeRecord.FailureCount' is never assigned to, and will always have its default value 0\nPASS: 23 App.Persistent integration assertions; real worker/files, injected native identity; no Windows UI.\n",
+  "stderr": "",
+  "windows_native_executed": false,
+  "windows_ui_executed": false,
+  "kind": "executed_linux",
+  "reported_assertions": 23
+}

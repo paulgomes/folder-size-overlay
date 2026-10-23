@@ -1,0 +1,25 @@
+{
+  "name": "visual-v5",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "/workspace/scratch/b2a202e48e18/qa/tooling/compile_net8.py",
+    "--out",
+    "/workspace/scratch/b2a202e48e18/qa/v60-evidence/visual-v5.dll",
+    "--run",
+    "/workspace/scratch/b2a202e48e18/qa/VisualV5Tests.cs",
+    "/workspace/scratch/b2a202e48e18/pasta-gb-icones/LabelLayout.cs",
+    "/workspace/scratch/b2a202e48e18/pasta-gb-icones/LabelAppearance.cs",
+    "/workspace/scratch/b2a202e48e18/pasta-gb-icones/BoundedMtaWorker.cs",
+    "/workspace/scratch/b2a202e48e18/pasta-gb-icones/VisualSnapshotPolicy.cs",
+    "/workspace/scratch/b2a202e48e18/pasta-gb-icones/MetadataMemoryBudget.cs",
+    "/workspace/scratch/b2a202e48e18/pasta-gb-icones/ViewSnapshot.cs"
+  ],
+  "exit_code": 0,
+  "seconds": 1.156,
+  "stdout": "PASS: 171 visual policy, bounded worker, metadata budget and appearance checks. No Windows UI executed.\n",
+  "stderr": "",
+  "windows_native_executed": false,
+  "windows_ui_executed": false,
+  "kind": "executed_linux",
+  "reported_assertions": 171
+}

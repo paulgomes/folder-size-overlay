@@ -1,0 +1,19 @@
+{
+  "name": "installer-payload-v60",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "/workspace/scratch/b2a202e48e18/qa/tooling/compile_net8.py",
+    "--out",
+    "/workspace/scratch/b2a202e48e18/qa/v60-evidence/installer-payload-v60.dll",
+    "--run",
+    "/workspace/scratch/b2a202e48e18/qa/V60PackagePayloadTests.cs"
+  ],
+  "exit_code": 0,
+  "seconds": 0.782,
+  "stdout": "PASS: 7 setup payload/version/integrity checks; installer not executed on Windows.\n",
+  "stderr": "",
+  "windows_native_executed": false,
+  "windows_ui_executed": false,
+  "kind": "executed_linux",
+  "reported_assertions": 7
+}

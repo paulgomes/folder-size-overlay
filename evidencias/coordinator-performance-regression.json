@@ -1,0 +1,24 @@
+{
+  "name": "coordinator-performance-regression",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "/workspace/scratch/b2a202e48e18/qa/tooling/compile_net8.py",
+    "--out",
+    "/workspace/scratch/b2a202e48e18/qa/v60-evidence/coordinator-performance-regression.dll",
+    "--run",
+    "/workspace/scratch/b2a202e48e18/qa/CoordinatorPerformanceTests.cs",
+    "/workspace/scratch/b2a202e48e18/pasta-gb-icones/PathRelations.cs",
+    "/workspace/scratch/b2a202e48e18/pasta-gb-icones/SizeRefreshPolicy.cs",
+    "/workspace/scratch/b2a202e48e18/pasta-gb-icones/SizePresentation.cs",
+    "/workspace/scratch/b2a202e48e18/pasta-gb-icones/AppPreferences.cs",
+    "/workspace/scratch/b2a202e48e18/pasta-gb-icones/FolderChangeTracker.cs"
+  ],
+  "exit_code": 0,
+  "seconds": 1.179,
+  "stdout": "PASS: 1710 coordinator performance regression assertions.\n",
+  "stderr": "",
+  "windows_native_executed": false,
+  "windows_ui_executed": false,
+  "kind": "executed_linux",
+  "reported_assertions": 1710
+}

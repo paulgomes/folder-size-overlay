@@ -1,0 +1,20 @@
+{
+  "name": "layout-regression",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "/workspace/scratch/b2a202e48e18/qa/tooling/compile_net8.py",
+    "--out",
+    "/workspace/scratch/b2a202e48e18/qa/v60-evidence/layout-regression.dll",
+    "--run",
+    "/workspace/scratch/b2a202e48e18/qa/LabelLayoutReviewTests.cs",
+    "/workspace/scratch/b2a202e48e18/pasta-gb-icones/LabelLayout.cs"
+  ],
+  "exit_code": 0,
+  "seconds": 0.834,
+  "stdout": "PASS: 71 layout/format checks against production LabelLayout.cs (net8 logic only; no Windows UI execution).\n",
+  "stderr": "",
+  "windows_native_executed": false,
+  "windows_ui_executed": false,
+  "kind": "executed_linux",
+  "reported_assertions": 71
+}

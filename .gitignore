@@ -1,0 +1,21 @@
+# Development files and local runtime data
+.vs/
+.vscode/
+**/bin/
+**/obj/
+__pycache__/
+*.py[cod]
+*.user
+*.suo
+*.log
+*.tmp
+*.bak
+*.orig
+
+# Credentials and signing material do not belong in source control
+.env
+.env.*
+!.env.example
+*.pfx
+*.p12
+*.key
