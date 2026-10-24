@@ -315,7 +315,10 @@ namespace PastaGBIcons
                     }
                     finally { metrics.RecordCapture(false, watch.Elapsed.TotalMilliseconds); }
                 }
-                int delay = pacing.NextDelay(changed, incomplete, !paused, settings.DesktopInterval, settings.DesktopIdleInterval);
+                // Pausado não há o que observar: recuo longo (resume sinaliza o wake).
+                int delay = paused ? DiscoveryIdleNoSurfaceMs
+                    : pacing.NextDelay(changed, incomplete, true, settings.DesktopInterval, settings.DesktopIdleInterval);
+                if (paused) pacing.Reset();
                 if (desktopWake.Wait(delay, signal)) pacing.Reset();
             }
         }
@@ -357,8 +360,15 @@ namespace PastaGBIcons
                         finally { metrics.RecordCapture(true, watch.Elapsed.TotalMilliseconds); }
                     }
                     bool changed = visual != Interlocked.Read(ref explorerVisualVersion);
-                    int delay = pacing.NextDelay(changed, incomplete, !paused && explorerEnabled,
-                        settings.ExplorerInterval, settings.ExplorerIdleInterval);
+                    bool active = !paused && explorerEnabled;
+                    int surfaceCount; lock (stateGate) surfaceCount = explorerSurfaces.Count;
+                    // Sem janela do Explorer aberta (ou pausado/desligado) e nada
+                    // mudando: recuo longo em vez de varrer UI Automation a cada 2 s.
+                    // Abrir uma janela gera evento de foco -> explorerWake.Signal.
+                    bool idleNothing = !active || (!changed && !incomplete && surfaceCount == 0);
+                    int delay = idleNothing ? DiscoveryIdleNoSurfaceMs
+                        : pacing.NextDelay(changed, incomplete, active, settings.ExplorerInterval, settings.ExplorerIdleInterval);
+                    if (idleNothing) pacing.Reset();
                     if (explorerWake.Wait(delay, signal)) pacing.Reset();
                 }
             }

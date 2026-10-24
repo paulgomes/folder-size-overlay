@@ -8,6 +8,20 @@ namespace PastaGBIcons
     internal sealed partial class IconContext
     {
         private long lastResumeTick;
+        private DateTime lastFullRenderUtc;
+        // Cadências do render: 32 ms enquanto há mudança a desenhar; 2 s de
+        // "batida" ociosa (só uma comparação de versão, sem redesenhar); e um
+        // render de segurança no máximo a cada HeartbeatSeconds, como rede para
+        // algum WinEvent nativo que tenhamos perdido.
+        private const int ActiveRenderMs = 32;
+        private const int IdleRenderMs = 2000;
+        private const double HeartbeatSeconds = 10d;
+        // Recuo longo da descoberta quando não há nada para observar (pausado,
+        // ou sem nenhuma janela do Explorer): em vez de capturar UI Automation a
+        // cada ~2 s para sempre, dorme e acorda sob demanda pelos WinEvents já
+        // assinados (foco/ambiente/resume sinalizam desktopWake/explorerWake).
+        // O teto também funciona como re-varredura de segurança periódica.
+        private const int DiscoveryIdleNoSurfaceMs = 30000;
         private void RequestRender()
         {
             if (stopped) return;
@@ -18,17 +32,28 @@ namespace PastaGBIcons
         private void ScheduleRender()
         {
             if (stopped || renderTimer == null) return;
-            // A bounded frame rate coalesces bursts of discovery/progress. The
-            // one-second heartbeat remains as a guard for missing native events.
-            if (renderTimer.Interval != 32) renderTimer.Interval = 32;
+            // A bounded frame rate coalesces bursts of discovery/progress.
+            if (renderTimer.Interval != ActiveRenderMs) renderTimer.Interval = ActiveRenderMs;
         }
 
         private void Render()
         {
             if (stopped) return;
             if (rendering) { RequestRender(); return; }
-            rendering = true;
             long requested = Interlocked.Read(ref renderRequestVersion);
+            // Nada novo para desenhar: NÃO redesenhar todas as etiquetas a cada
+            // segundo (era a maior fonte de CPU/GDI em repouso — cada etiqueta
+            // custa dezenas de chamadas USER32/GDI). Só repassa por RenderCore
+            // de tempos em tempos (HeartbeatSeconds) como rede de segurança para
+            // eventos nativos perdidos; nas demais batidas ociosas apenas volta.
+            if (requested == lastRenderedRequest &&
+                (DateTime.UtcNow - lastFullRenderUtc).TotalSeconds < HeartbeatSeconds)
+            {
+                if (!stopped && renderTimer != null && renderTimer.Interval != IdleRenderMs)
+                    renderTimer.Interval = IdleRenderMs;
+                return;
+            }
+            rendering = true;
             Stopwatch watch = Stopwatch.StartNew();
             try { using (LayeredLabel.BeginBatch()) RenderCore(); }
             catch (Exception ex)
@@ -41,9 +66,10 @@ namespace PastaGBIcons
                 metrics.RecordRender(watch.Elapsed.TotalMilliseconds);
                 metrics.SampleProcess();
                 lastRenderedRequest = requested;
+                lastFullRenderUtc = DateTime.UtcNow;
                 rendering = false;
                 if (!stopped && renderTimer != null)
-                    renderTimer.Interval = Interlocked.Read(ref renderRequestVersion) == lastRenderedRequest ? 1000 : 32;
+                    renderTimer.Interval = Interlocked.Read(ref renderRequestVersion) == lastRenderedRequest ? IdleRenderMs : ActiveRenderMs;
             }
         }
 
